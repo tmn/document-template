@@ -1,6 +1,6 @@
 # Document template
 
-A document template made with HTML and CSS.
+A document template made with HTML and CSS *in the making*.
 
 ## Printing
 
