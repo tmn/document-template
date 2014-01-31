@@ -1,0 +1,72 @@
+body {
+  font: 0.8em/1.6em "Cambria", Georgia, serif;
+}
+header {
+  margin: 40px 0 60px 0;
+}
+header .author {
+  color: #888;
+}
+header h1 {
+  font-size: 1.8em;
+  line-height: 1.3em;
+  margin: 0 0 20px 0;
+  font-weight: bold;
+}
+h1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin: 0 0 10px 0;
+}
+h1 span {
+  display: block;
+  font-weight: normal;
+}
+section { margin: 0 0 40px 0; }
+.author { margin: 10px 0; }
+p { margin: 0 0 12px 0; }
+.chapter ul {
+  list-style: disc;
+  margin: 0 0 0 25px;
+}
+footer ul li {
+  margin: 0 0 12px 0;
+}
+footer > ul > li:before {
+  counter-increment: RefNo;
+  content: "[" counter(RefNo)"] ";
+  margin: 0 5px 0 0;
+}
+footer {
+  counter-reset: RefNo;
+}
+
+@media only screen {
+  #container {
+    width: 8.27in;
+    margin: 0 auto;
+  }
+  body {
+    font: 14px/22px "Cambria", Georgia, serif;
+  }
+}
+
+@page {
+  size:8.27in 11.69in; 
+  margin:1in 1.2in 1.2in 1.3in;
+
+  @bottom-right {
+    content: counter(page) " of " counter(pages);
+  }
+}
+
+section#content > section.chapter > h1:before {
+  counter-increment: ChapterNo;
+  content:counter(ChapterNo) " ";
+  margin: 0 8px 0 0;
+}
+section#content {
+  page: chapters;
+  counter-reset: ChapterNo;
+}
