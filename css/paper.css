@@ -42,6 +42,54 @@ footer {
   counter-reset: RefNo;
 }
 
+@page {
+  size:8.27in 11.69in; 
+  margin:1in 1.2in 1.2in 1.3in;
+
+  @bottom-right {
+    content: counter(page) " of " counter(pages);
+  }
+
+  @top-center {
+
+  }
+}
+
+@page chapter:first {
+  @top-center {
+    content: "";
+  }
+}
+
+@page chapter {
+  @top-center {
+    content: "test";
+  }
+}
+
+section.chapter {
+  page: chapter;
+  page-break-before: always;
+}
+
+/*@page chapters {
+
+}*/
+
+section#content {
+  page: chapters;
+  counter-reset: ChapterNo;
+}
+
+section#content > section.chapter > h1:before {
+  counter-increment: ChapterNo;
+  content: counter(ChapterNo) " ";
+  margin: 0 8px 0 0;
+}
+
+
+
+
 @media only screen {
   #container {
     width: 8.27in;
@@ -50,23 +98,4 @@ footer {
   body {
     font: 14px/22px "Cambria", Georgia, serif;
   }
-}
-
-@page {
-  size:8.27in 11.69in; 
-  margin:1in 1.2in 1.2in 1.3in;
-
-  @bottom-right {
-    content: counter(page) " of " counter(pages);
-  }
-}
-
-section#content > section.chapter > h1:before {
-  counter-increment: ChapterNo;
-  content:counter(ChapterNo) " ";
-  margin: 0 8px 0 0;
-}
-section#content {
-  page: chapters;
-  counter-reset: ChapterNo;
 }
