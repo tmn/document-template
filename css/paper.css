@@ -1,22 +1,27 @@
-body            { font: 0.8em/1.6em "Cambria", Georgia, serif; }
-header          { margin: 40px 0 60px 0; }
-header .author  { color: #888; }
+body {
+  font: 0.8em/1.6em "Cambria", Georgia, serif;
+}
+header {
+  margin: 40px 0 60px 0;
+}
+header .author {
+  color: #888;
+  margin: 10px 0;
+}
 
 
-/* HEADINGS 
+
+/* Headings 
 --------------------------------------------------------------------------------------- */
 h1 {
   font-size: 2em;
   font-weight: normal;
-  line-height: 1.2em;
+
   margin: 10px 0 20px 0;
 
-  string-set: header content();
-}
+  line-height: 1.2em;
 
-h1 span {
-  display: block;
-  font-weight: normal;
+  string-set: header content();
 }
 
 header h1 {
@@ -26,16 +31,19 @@ header h1 {
   font-weight: bold;
 }
 
+header h1 span {
+  display: block;
+}
 
-/* Some default stuff 
+
+/* Others
 --------------------------------------------------------------------------------------- */
-section       { margin: 0 0 40px 0; }
-.author       { margin: 10px 0; }
-p             { margin: 0 0 12px 0; }
-.chapter ul   { list-style: disc; margin: 0 0 0 25px; }
+p {
+  margin: 0 0 12px 0;
+}
 
 
-/* FOOTER 
+/* Footer 
 --------------------------------------------------------------------------------------- */
 footer ul li {
   margin: 0 0 12px 0;
@@ -50,19 +58,21 @@ footer {
 }
 
 
-/* PAGE stuff 
+/* Page stuff 
 --------------------------------------------------------------------------------------- */
 @page {
-  size:8.27in 11.69in; 
-  margin:1in 1.2in 1.2in 1.3in;
+  size: 8.27in 11.69in; 
+  margin: 1in 1.2in 1.2in 1.3in;
 
   @bottom-center {
     content: counter(page) " of " counter(pages);
     font-size: .6em;
   }
-
 }
 
+@page chapters {
+
+}
 
 @page chapter {
   @top-center {
@@ -72,6 +82,12 @@ footer {
 }
 
 
+/* Sections
+--------------------------------------------------------------------------------------- */
+section {
+  margin: 0 0 40px 0;
+}
+
 section.chapter {
   page: chapter;
   page-break-after: always;
@@ -79,8 +95,8 @@ section.chapter {
   display: block;
 }
 
-@page chapters {
-
+section.chapter ul {
+  list-style: disc; margin: 0 0 0 25px;
 }
 
 section#content {
