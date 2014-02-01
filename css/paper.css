@@ -46,13 +46,11 @@ footer {
   size:8.27in 11.69in; 
   margin:1in 1.2in 1.2in 1.3in;
 
-  @bottom-right {
+  @bottom-center {
     content: counter(page) " of " counter(pages);
+    font-size: .5em;
   }
 
-  @top-center {
-
-  }
 }
 
 @page chapter:first {
@@ -69,7 +67,7 @@ footer {
 
 section.chapter {
   page: chapter;
-  page-break-before: always;
+  page-break-after: always;
 }
 
 /*@page chapters {
@@ -83,8 +81,10 @@ section#content {
 
 section#content > section.chapter > h1:before {
   counter-increment: ChapterNo;
-  content: counter(ChapterNo) " ";
+  content: counter(ChapterNo);
+  border-right: 1px solid #222;
   margin: 0 8px 0 0;
+  padding: 0 8px 0 0;
 }
 
 
