@@ -18,6 +18,8 @@ h1 {
   font-weight: bold;
   line-height: 1.2em;
   margin: 0 0 10px 0;
+
+  string-set: header content();
 }
 h1 span {
   display: block;
@@ -48,31 +50,30 @@ footer {
 
   @bottom-center {
     content: counter(page) " of " counter(pages);
-    font-size: .5em;
+    font-size: .6em;
   }
 
 }
 
-@page chapter:first {
-  @top-center {
-    content: "";
-  }
-}
 
 @page chapter {
   @top-center {
-    content: "test";
+    content: string(header, first);;
+    font-size: .6em;
   }
 }
+
 
 section.chapter {
   page: chapter;
   page-break-after: always;
+  
+  display: block;
 }
 
-/*@page chapters {
+@page chapters {
 
-}*/
+}
 
 section#content {
   page: chapters;
@@ -86,7 +87,6 @@ section#content > section.chapter > h1:before {
   margin: 0 8px 0 0;
   padding: 0 8px 0 0;
 }
-
 
 
 
