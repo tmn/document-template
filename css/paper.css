@@ -102,7 +102,7 @@ section {
   margin: 0 0 40px 0;
 }
 
-section#content {
+div#content {
   page: chapters;
   counter-reset: ChapterNo;
 }
@@ -122,7 +122,7 @@ section.chapter > section {
   counter-reset: SubSubSection;
 }
 
-section#content > section.chapter > h1:before {
+div#content > section.chapter > h1:before {
   counter-increment: ChapterNo;
   content: counter(ChapterNo);
   border-right: 1px solid #e1e1e1;
@@ -130,13 +130,13 @@ section#content > section.chapter > h1:before {
   padding: 0 25px 0 0;
 }
 
-section#content > section.chapter > section > h1:before {
+div#content > section.chapter > section > h1:before {
   counter-increment: SubSection;
   content: counter(ChapterNo)"."counter(SubSection);
   margin: 0 25px 0 0;
 }
 
-section#content > section.chapter > section > section > h1:before {
+div#content > section.chapter > section > section > h1:before {
   counter-increment: SubSubSection;
   content: counter(ChapterNo)"."counter(SubSection)"."counter(SubSubSection);
   margin: 0 25px 0 0;
