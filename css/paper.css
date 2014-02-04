@@ -107,10 +107,16 @@ div#content {
   counter-reset: ChapterNo;
 }
 
+header,
+div#preface,
+div#toc,
+section.chapter {
+  page-break-after: always;
+}
+
 section.chapter {
   page: chapter;
   counter-reset: SubSection;
-  page-break-after: always;
   display: block;
 }
 
