@@ -101,11 +101,38 @@ footer {
 ul.toc a {
   text-decoration: none;
   color: #000;
+  font-weight: bold;
+}
+
+ul.toc li {
+  padding: 15px 0 0 0;
+}
+
+ul.toc li.sub,
+ul.toc li.subsub {
+  padding: 0;
+}
+
+ul.toc li.sub a,
+ul.toc li.subsub a {
+  font-weight: normal;
+  padding: 0;
 }
 
 ul.toc a::after {
   content: leader('.') target-counter(attr(href), page);
+
 }
+
+ul.toc li.sub {
+  margin-left: 15px;
+}
+
+ul.toc li.subsub {
+  margin-left: 30px;
+  
+}
+
 
 
 /* Sections
