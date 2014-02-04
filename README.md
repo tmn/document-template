@@ -32,7 +32,7 @@ There is many ways of getting the HTML and CSS documents into a single "printabl
 </section>
 ```
 
-#### Sections and sub-sections
+#### Sections and subsections
 
 ```
 <section id="content">
