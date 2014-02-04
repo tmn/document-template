@@ -105,12 +105,13 @@ section#content {
 
 section.chapter {
   page: chapter;
+  counter-reset: SubSection;
   page-break-after: always;
   display: block;
 }
 
 section.chapter ul {
-  counter-reset: SubSection;
+  
   list-style: disc; margin: 0 0 0 25px;
 }
 
