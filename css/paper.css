@@ -88,6 +88,11 @@ section {
   margin: 0 0 40px 0;
 }
 
+section#content {
+  page: chapters;
+  counter-reset: ChapterNo;
+}
+
 section.chapter {
   page: chapter;
   page-break-after: always;
@@ -96,12 +101,13 @@ section.chapter {
 }
 
 section.chapter ul {
+  counter-reset: SubSection;
+
   list-style: disc; margin: 0 0 0 25px;
 }
 
-section#content {
-  page: chapters;
-  counter-reset: ChapterNo;
+section.chapter > section {
+  counter-reset: SubSubSection;
 }
 
 section#content > section.chapter > h1:before {
@@ -110,6 +116,19 @@ section#content > section.chapter > h1:before {
   border-right: 1px solid #e1e1e1;
   margin: 0 25px 0 0;
   padding: 0 25px 0 0;
+}
+
+section#content > section.chapter > section > h1:before {
+  counter-increment: SubSection;
+  content: counter(ChapterNo)"."counter(SubSection);
+  margin: 0 25px 0 0;
+ 
+}
+
+section#content > section.chapter > section > section > h1:before {
+  counter-increment: SubSubSection;
+  content: counter(ChapterNo)"."counter(SubSection)"."counter(SubSubSection);
+  margin: 0 25px 0 0;
 }
 
 
