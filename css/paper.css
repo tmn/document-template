@@ -1,5 +1,5 @@
 body {
-  font: 0.8em/1.6em "Cambria", Georgia, serif;
+  font: .9em/1.6em "Cambria", Georgia, serif;
 }
 header {
   margin: 40px 0 60px 0;
@@ -53,6 +53,7 @@ header h1 span {
 --------------------------------------------------------------------------------------- */
 p {
   margin: 0 0 12px 0;
+  text-align: justify;
 }
 
 
