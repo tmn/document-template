@@ -140,16 +140,3 @@ section#content > section.chapter > section > section > h1:before {
   content: counter(ChapterNo)"."counter(SubSection)"."counter(SubSubSection);
   margin: 0 25px 0 0;
 }
-
-
-/* Simple text preview on screen 
---------------------------------------------------------------------------------------- */
-@media only screen {
-  #container {
-    width: 8.27in;
-    margin: 0 auto;
-  }
-  body {
-    font: 14px/22px "Cambria", Georgia, serif;
-  }
-}
