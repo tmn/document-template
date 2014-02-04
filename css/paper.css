@@ -178,11 +178,11 @@ div#content > section.chapter > h1:before {
 div#content > section.chapter > section > h1:before {
   counter-increment: SubSection;
   content: counter(ChapterNo)"."counter(SubSection);
-  margin: 0 25px 0 0;
+  margin: 0 30px 0 0;
 }
 
 div#content > section.chapter > section > section > h1:before {
   counter-increment: SubSubSection;
   content: counter(ChapterNo)"."counter(SubSection)"."counter(SubSubSection);
-  margin: 0 25px 0 0;
+  margin: 0 30px 0 0;
 }
