@@ -2,6 +2,8 @@
 
 A document template made with HTML and CSS *in the making*. 
 
+Demo: http://dev.tmn.io/master/index.pdf
+
 ## Printing
 
 There is many ways of getting the HTML and CSS documents into a single "printable" document. 
@@ -14,10 +16,30 @@ There is many ways of getting the HTML and CSS documents into a single "printabl
 
 ## Features
 
+#### TOC
+
+Have the TOC-element point to a section ID:
+
+```
+<ul class="toc">
+  <li><a href="#intro">Introduction</a></li>
+</ul>
+
+
+...
+
+
+<section class="chapter" id="intro">
+  <h1>Introduction</h1>
+  <p>Lorem ipsum dolor ...</p>
+</section>
+```
+
+
 #### Chapters
 
 ```
-<section id="content">
+<div id="content">
 
   <section class="chapter">
     <h1>Chapter one</h1>
@@ -29,13 +51,13 @@ There is many ways of getting the HTML and CSS documents into a single "printabl
     <p>Content of chapter two</p>
   </section>
 
-</section>
+</div>
 ```
 
 #### Sections and subsections
 
 ```
-<section id="content">
+<div id="content">
 
   <section class="chapter">
     <h1>Lorem</section>h1>
@@ -53,7 +75,7 @@ There is many ways of getting the HTML and CSS documents into a single "printabl
 
   </section>
 
-</section>
+</div>
 ```
 
 The chapter title is prefixed with the chapter number. Subsections and subsubsections are prefixed with chapter number and subsection number:
