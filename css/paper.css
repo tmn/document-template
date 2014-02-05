@@ -1,9 +1,11 @@
 body {
   font: .9em/1.6em "Cambria", Georgia, serif;
 }
+
 header {
   margin: 40px 0 60px 0;
 }
+
 header .author {
   color: #888;
   margin: 10px 0;
@@ -49,12 +51,14 @@ header h1 span {
 }
 
 
+
 /* Others
 --------------------------------------------------------------------------------------- */
 p {
   margin: 0 0 12px 0;
   text-align: justify;
 }
+
 
 
 /* Page stuff 
@@ -79,6 +83,7 @@ p {
     font-size: .6em;
   }
 }
+
 
 
 /* TOC
@@ -106,7 +111,6 @@ ul.toc li.subsub a {
 
 ul.toc a::after {
   content: leader('.') target-counter(attr(href), page);
-
 }
 
 ul.toc li.sub {
@@ -115,7 +119,6 @@ ul.toc li.sub {
 
 ul.toc li.subsub {
   margin-left: 30px;
-  
 }
 
 
@@ -145,7 +148,8 @@ section.chapter {
 }
 
 section.chapter ul {
-  list-style: disc; margin: 0 0 0 25px;
+  list-style: disc;
+  margin: 0 0 0 25px;
 }
 
 section.chapter > section {
