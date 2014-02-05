@@ -57,21 +57,6 @@ p {
 }
 
 
-/* Footer 
---------------------------------------------------------------------------------------- */
-footer ul li {
-  margin: 0 0 12px 0;
-}
-footer > ul > li:before {
-  counter-increment: RefNo;
-  content: "[" counter(RefNo)"] ";
-  margin: 0 5px 0 0;
-}
-footer {
-  counter-reset: RefNo;
-}
-
-
 /* Page stuff 
 --------------------------------------------------------------------------------------- */
 @page {
